@@ -46,6 +46,8 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <Optimize>False</Optimize>
+    <AndroidUseSharedRuntime>True</AndroidUseSharedRuntime>
+		<UseHighDPIResources>False</UseHighDPIResources>
     <OutputPath>bin\Debug\</OutputPath>
     <EmbedAssembliesIntoApk>False</EmbedAssembliesIntoApk>
     <AndroidCreatePackagePerAbi>False</AndroidCreatePackagePerAbi>
@@ -238,10 +240,10 @@
   <ItemGroup>
     <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_launcher_foreground.png" />
   </ItemGroup>
-  <ItemGroup Condition="'$(AppEnvironment)'!='Production'">
+  <ItemGroup Condition="'$(ApplicationEnvironment)'!='Production'">
     <AndroidResource Include="Resources\xml\network_security_config.xml" />
   </ItemGroup>
-  <ItemGroup Condition="'$(AppEnvironment)'=='Production'">
+  <ItemGroup Condition="'$(ApplicationEnvironment)'=='Production'">
     <AndroidResource Include="Resources\xml\network_security_config_prod.xml">
       <LogicalName>xml\network_security_config.xml</LogicalName>
     </AndroidResource>

@@ -78,7 +78,9 @@ namespace ApplicationTemplate
 			{
 				await section.Navigate(ct, () => new OnboardingPageViewModel());
 			}
+			//-:cnd:noEmit
 #if __MOBILE__ || WINDOWS_UWP
+			//+:cnd:noEmit
 			var dispatcher = services.GetRequiredService<CoreDispatcher>();
 
 			_ = dispatcher.RunAsync(CoreDispatcherPriority.Normal, DismissSplashScreen);
@@ -87,7 +89,9 @@ namespace ApplicationTemplate
 			{
 				Shell.Instance.ExtendedSplashScreen.Dismiss();
 			}
+			//-:cnd:noEmit
 #endif
+			//+:cnd:noEmit
 		}
 
 		private void NotifyUserOnSessionExpired(IServiceProvider services)
@@ -105,7 +109,7 @@ namespace ApplicationTemplate
 						.OkCommand()
 					);
 				})
-				.Subscribe(_ => { }, e => _logger.LogError(e, "Failed to notify user of session expiration."))
+				.Subscribe(_ => { }, e => Logger.LogError(e, "Failed to notify user of session expiration."))
 				.DisposeWith(_neverDisposed);
 		}
 
@@ -199,7 +203,7 @@ namespace ApplicationTemplate
 			};
 		}
 
-		protected override ILogger GetLogger(IServiceProvider serviceProvider)
+		protected override ILogger GetOrCreateLogger(IServiceProvider serviceProvider)
 		{
 			return serviceProvider.GetRequiredService<ILogger<CoreStartup>>();
 		}
