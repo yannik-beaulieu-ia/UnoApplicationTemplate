@@ -109,14 +109,14 @@
     <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="8.6.2" />
     <PackageReference Include="Reactive.Annex.Uno" Version="0.2.0-dev.14" />
     <PackageReference Include="GeneratedSerializers.Json" Version="0.2.0-dev.10" />
-    <PackageReference Include="Uno.UI" Version="3.1.0-dev.628" />
-    <PackageReference Include="Uno.UI.RemoteControl" Version="3.1.0-dev.628" />
+    <PackageReference Include="Uno.UI" Version="3.1.0-dev.747" />
+    <PackageReference Include="Uno.UI.RemoteControl" Version="3.1.0-dev.747" />
     <PackageReference Include="Uno.Injectable" Version="1.34.0-dev.175" />
     <PackageReference Include="Uno.CodeGen" Version="1.34.0-dev.175" />
-    <PackageReference Include="Chinook.DynamicMvvm" Version="0.2.0-dev.24" />
-    <PackageReference Include="Chinook.DynamicMvvm.Uno" Version="0.2.0-dev.24" />
-    <PackageReference Include="Chinook.DynamicMvvm.Reactive" Version="0.2.0-dev.24" />
-    <PackageReference Include="Chinook.DynamicMvvm.FluentValidation" Version="0.2.0-dev.24" />
+    <PackageReference Include="Chinook.DynamicMvvm" Version="0.2.0-dev.26" />
+    <PackageReference Include="Chinook.DynamicMvvm.Uno" Version="0.2.0-dev.26" />
+    <PackageReference Include="Chinook.DynamicMvvm.Reactive" Version="0.2.0-dev.26" />
+    <PackageReference Include="Chinook.DynamicMvvm.FluentValidation" Version="0.2.0-dev.26" />
     <PackageReference Include="Chinook.SectionsNavigation.Uno" Version="0.2.0-dev.37" />
     <PackageReference Include="Chinook.SectionsNavigation.Reactive" Version="0.2.0-dev.37" />
     <PackageReference Include="Chinook.DataLoader.Uno" Version="0.2.0-dev.29" />
@@ -127,7 +127,7 @@
     <PackageReference Include="Nventive.MessageDialog.Uno" Version="0.1.0-dev.5" />
     <PackageReference Include="Nventive.Persistence.Reactive" Version="0.1.0-dev.9" />
     <PackageReference Include="Nventive.Persistence.Uno" Version="0.1.0-dev.9" />
-    <PackageReference Include="Nventive.AsyncWebView.Uno" Version="0.1.0-dev.7" />
+    <PackageReference Include="Nventive.AsyncWebView.Uno" Version="0.1.0-dev.11" />
     <PackageReference Include="Nventive.View.Uno" Version="0.1.0-dev.17" />
     <PackageReference Include="nventive.Nimue.Application.Building.Light">
       <Version>0.1.0-alpha.58</Version>
