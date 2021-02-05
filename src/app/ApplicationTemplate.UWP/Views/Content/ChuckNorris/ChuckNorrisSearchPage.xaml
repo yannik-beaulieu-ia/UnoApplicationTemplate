@@ -6,6 +6,7 @@
 	  xmlns:dl="using:Chinook.DataLoader"
 	  xmlns:ue="using:Chinook.View.Extensions"
 	  xmlns:u="using:Chinook.View.Controls"
+	  xmlns:toolkit="using:Uno.UI.Toolkit"
 	  mc:Ignorable="d">
 
 	<Page.Resources>
@@ -49,7 +50,16 @@
 		</Grid.RowDefinitions>
 
 		<CommandBar Content="Quotes"
-					x:Uid="ChuckNorrisSearch_CommandBar" />
+		            x:Uid="ChuckNorrisSearch_CommandBar"
+		            Foreground="Magenta">
+			<toolkit:CommandBarExtensions.NavigationCommand>
+				<AppBarButton Command="{Binding NavigateBack}">
+					<AppBarButton.Icon>
+						<BitmapIcon UriSource="ms-appx:///Assets/Image_Example.png" />
+					</AppBarButton.Icon>
+				</AppBarButton>
+			</toolkit:CommandBarExtensions.NavigationCommand>
+		</CommandBar>
 
 		<TextBox Text="{Binding SearchTerm, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
 				 PlaceholderText="Enter a search term"
